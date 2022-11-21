@@ -9,15 +9,15 @@ import SwiftUI
 
 struct TweetRowView: View {
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             
-            // profile image, user info, tweet
+            //MARK: profile image, user info, tweet
             HStack(alignment: .top, spacing: 12) {
                 Circle()
                     .frame(width: 56, height: 56)
                     .foregroundColor(Color(.systemBlue))
                 
-                // user info and tweet caption
+                //MARK: user info and tweet caption
                 VStack(alignment: .leading, spacing: 4) {
                     // user info
                     HStack {
@@ -41,7 +41,45 @@ struct TweetRowView: View {
                         .multilineTextAlignment(.leading)
                 }
             }
+            
+            //MARK: action buttons
+            HStack {
+                Button {
+                    //
+                } label: {
+                    Image(systemName: "bubble.left")
+                }
+                
+                Spacer()
+                
+                Button {
+                    //
+                } label: {
+                    Image(systemName: "arrow.2.squarepath")
+                }
+                
+                Spacer()
+                
+                Button {
+                    //
+                } label: {
+                    Image(systemName: "heart")
+                }
+                
+                Spacer()
+                
+                Button {
+                    //
+                } label: {
+                    Image(systemName: "bookmark")
+                }
+
+            }
+                .padding()
+            
+            Divider()
         }
+        .padding()
     }
 }
 
