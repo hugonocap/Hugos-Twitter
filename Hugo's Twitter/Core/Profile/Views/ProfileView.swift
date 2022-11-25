@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             headerView
             actionButtons
+            userInfoDetails
             
             Spacer()
         }
@@ -40,11 +41,11 @@ extension ProfileView {
                         .frame(width: 20, height: 16)
                         .foregroundColor(.white)
                 }
-
+                
                 
                 Circle()
                     .frame(width: 72, height: 72)
-                .offset(x: 18, y: 30)
+                    .offset(x: 18, y: 30)
             }
         }
         .frame(height: 96)
@@ -69,8 +70,63 @@ extension ProfileView {
                     .foregroundColor(.black)
                     .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 0.75))
             }
-
+            
         }
         .padding(.trailing)
+    }
+    
+    var userInfoDetails: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            
+            HStack {
+                Text("Elon Musk")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                
+                Image(systemName: "checkmark.seal.fill")
+                    .foregroundColor(Color(.systemBlue))
+            }
+            
+            Text("@elonmusk")
+                .font(.subheadline)
+                .foregroundColor(.gray)
+            
+            HStack {
+                Image(systemName: "calendar")
+                Text("Joined June 2009")
+            }
+            .padding(.top)
+            .font(.callout)
+            .foregroundColor(.gray)
+            
+            HStack(spacing: 24) {
+                
+                HStack(alignment: .center, spacing: 4) {
+                    
+                    Text("130")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                    
+                    Text("Following")
+                        .font(.subheadline)
+                    
+                }
+                
+                HStack(alignment: .center, spacing: 4) {
+                    
+                    Text("118.9M")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                    
+                    Text("Followers")
+                        .font(.subheadline)
+                    
+                }
+                
+            }
+            .padding(.top)
+            
+        }
+        .padding(.horizontal)
     }
 }
