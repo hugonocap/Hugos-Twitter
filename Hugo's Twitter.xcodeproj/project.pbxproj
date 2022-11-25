@@ -160,6 +160,21 @@
 			path = Tweets;
 			sourceTree = "<group>";
 		};
+		D9B612052930C1A100F251A9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D9D739FF292F6AC00054D3BE /* ProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D9B612062930C1AB00F251A9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		D9D739F6292F66480054D3BE /* MainTab */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +210,8 @@
 		D9D739FC292F6A530054D3BE /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				D9D739FF292F6AC00054D3BE /* ProfileView.swift */,
+				D9B612062930C1AB00F251A9 /* ViewModels */,
+				D9B612052930C1A100F251A9 /* Views */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
