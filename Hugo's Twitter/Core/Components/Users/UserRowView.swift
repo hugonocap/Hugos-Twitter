@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserRowView: View {
     var body: some View {
-        HStack {
+        HStack(spacing: 12) {
             
             Circle()
                 .frame(width: 48, height: 48)
@@ -18,6 +18,7 @@ struct UserRowView: View {
                 Text("elonmusk")
                     .font(.subheadline)
                     .fontWeight(.semibold)
+                    .foregroundColor(.black)
                 
                 Text("Elon Musk")
                     .font(.subheadline)
@@ -26,7 +27,8 @@ struct UserRowView: View {
             
             Spacer()
         }
-        .padding()
+        .padding(.horizontal)
+        .padding(.vertical, 4)
     }
 }
 

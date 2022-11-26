@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @State private var selectionFilter: TweetFilterViewModel = .tweets
+    @Environment(\.presentationMode) var presentationMode
     @Namespace var animation
     var body: some View {
         VStack(alignment: .leading) {
@@ -21,6 +22,7 @@ struct ProfileView: View {
             
             Spacer()
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
@@ -39,7 +41,7 @@ extension ProfileView {
             VStack {
                 
                 Button {
-                    //
+                    presentationMode.wrappedValue.dismiss()
                 } label: {
                     Image(systemName: "arrow.left")
                         .resizable()
