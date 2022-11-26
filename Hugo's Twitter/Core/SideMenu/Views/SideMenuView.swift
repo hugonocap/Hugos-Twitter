@@ -9,7 +9,20 @@ import SwiftUI
 
 struct SideMenuView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Circle()
+                .frame(width: 48, height: 48)
+            
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Hugo Montana")
+                    .font(.headline)
+                    .fontWeight(.bold)
+                
+                Text("@247geekymontana")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+            }
+        }
     }
 }
 
