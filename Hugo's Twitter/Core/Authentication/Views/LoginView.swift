@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
+    @State private var email = ""
+    @State private var password = ""
     var body: some View {
         // parent container
         VStack {
@@ -29,12 +31,66 @@ struct LoginView: View {
             .foregroundColor(.white)
             .clipShape(RoundedShape(corners: .bottomRight))
             
+            VStack(spacing: 40) {
+                TextField("Email", text: $email)
+                TextField("Password", text: $password)
+            }
+            .padding(.horizontal, 32)
+            .padding(.top, 44)
             
+            HStack {
+                Spacer()
+                
+                NavigationLink {
+                    //
+                } label: {
+                    Text("Forgot Password?")
+                        .font(.caption)
+                        .foregroundColor(Color(.systemBlue))
+                        .fontWeight(.semibold)
+                }
+                .padding(.top)
+                .padding(.trailing, 22)
+
+            }
+            
+            Button {
+                //
+            } label: {
+                Text("Sign In")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50)
+                    .background(Color(.systemBlue))
+                    .clipShape(Capsule())
+            }
+            .padding()
+            .shadow(color: .gray.opacity(0.5), radius: 10, x: 0, y: 0)
+
             
             Spacer()
             
+            HStack {
+                
+                Text("Don't have an account?")
+                
+                NavigationLink {
+                    RegistrationView()
+                        .navigationBarHidden(true)
+                } label: {
+                    Text("Sign Up")
+                        .fontWeight(.semibold)
+                }
+                
+            }
+            .padding(.bottom, 32)
+            .font(.footnote)
+            .foregroundColor(Color(.systemBlue))
+            
         }
         .ignoresSafeArea()
+        .navigationBarHidden(true)
     }
 }
 

@@ -12,7 +12,8 @@ struct Hugo_s_TwitterApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+//                ContentView()
+                LoginView()
             }
         }
     }
