@@ -27,6 +27,9 @@ struct LoginView: View {
             .padding(.leading)
             .background(Color(.systemBlue))
             .foregroundColor(.white)
+            .clipShape(RoundedShape(corners: .bottomRight))
+            
+            
             
             Spacer()
             
