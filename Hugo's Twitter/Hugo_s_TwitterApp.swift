@@ -6,14 +6,20 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct Hugo_s_TwitterApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
-//                ContentView()
-                LoginView()
+                ContentView()
+//                LoginView()
             }
         }
     }
