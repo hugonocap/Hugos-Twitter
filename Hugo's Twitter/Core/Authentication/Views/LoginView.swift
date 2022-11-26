@@ -15,21 +15,7 @@ struct LoginView: View {
         VStack {
             
             //MARK: Header
-            VStack(alignment: .leading) {
-                // fills background to entire screen
-                HStack { Spacer() }
-                
-                Text("Hello.")
-                
-                Text("Welcome Back")
-            }
-            .font(.largeTitle)
-            .fontWeight(.semibold)
-            .frame(height: 260)
-            .padding(.leading)
-            .background(Color(.systemBlue))
-            .foregroundColor(.white)
-            .clipShape(RoundedShape(corners: .bottomRight))
+            AuthenticationHeaderView(title1: "Hello.", title2: "Welcome Back")
             
             VStack(spacing: 40) {
                 CustomInputField(icon: "envelope", placeholder: "Email", text: $email)
