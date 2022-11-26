@@ -35,6 +35,7 @@
 		D9F77A2B29329F83006A1E16 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D9F77A2A29329F83006A1E16 /* FirebaseFirestore */; };
 		D9F77A2D29329F83006A1E16 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D9F77A2C29329F83006A1E16 /* FirebaseFirestoreSwift */; };
 		D9F77A2F29329F83006A1E16 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D9F77A2E29329F83006A1E16 /* FirebaseStorage */; };
+		D9F77A312932A46F006A1E16 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F77A302932A46F006A1E16 /* AuthViewModel.swift */; };
 		D9FC2068293221C40041FB7C /* NewTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC2067293221C40041FB7C /* NewTweetView.swift */; };
 		D9FC206A293223790041FB7C /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC2069293223790041FB7C /* TextArea.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		D9D73A03292F6AD80054D3BE /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		D9F77A2129328CA6006A1E16 /* AuthenticationHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationHeaderView.swift; sourceTree = "<group>"; };
 		D9F77A2529329B99006A1E16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D9F77A302932A46F006A1E16 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		D9FC2067293221C40041FB7C /* NewTweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTweetView.swift; sourceTree = "<group>"; };
 		D9FC2069293223790041FB7C /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +107,7 @@
 		D91E1A1D2932493F009D214E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D9F77A302932A46F006A1E16 /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				D989887B2931A0CE009A23FB /* SideMenuOptionRowView.swift in Sources */,
 				D9D739F8292F667B0054D3BE /* MainTabView.swift in Sources */,
 				D91E1A1F29324954009D214E /* LoginView.swift in Sources */,
+				D9F77A312932A46F006A1E16 /* AuthViewModel.swift in Sources */,
 				D9D73A02292F6ACC0054D3BE /* NotificationsView.swift in Sources */,
 				D9898879293196E5009A23FB /* UserStatsView.swift in Sources */,
 				D91E1A2129324960009D214E /* RegistrationView.swift in Sources */,

@@ -11,6 +11,8 @@ import Firebase
 @main
 struct Hugo_s_TwitterApp: App {
     
+    @StateObject var viewModel = AuthViewModel()
+    
     init() {
         FirebaseApp.configure()
     }
@@ -19,8 +21,8 @@ struct Hugo_s_TwitterApp: App {
         WindowGroup {
             NavigationView {
                 ContentView()
-//                LoginView()
             }
+            .environmentObject(viewModel)
         }
     }
 }
