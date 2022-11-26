@@ -19,6 +19,7 @@
 		D989887429319389009A23FB /* SideMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989887329319389009A23FB /* SideMenuRowView.swift */; };
 		D9898876293193B6009A23FB /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9898875293193B6009A23FB /* SideMenuViewModel.swift */; };
 		D9898879293196E5009A23FB /* UserStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9898878293196E5009A23FB /* UserStatsView.swift */; };
+		D989887B2931A0CE009A23FB /* SideMenuOptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989887A2931A0CE009A23FB /* SideMenuOptionRowView.swift */; };
 		D9D739F8292F667B0054D3BE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D739F7292F667B0054D3BE /* MainTabView.swift */; };
 		D9D739FE292F6A950054D3BE /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D739FD292F6A950054D3BE /* ExploreView.swift */; };
 		D9D73A00292F6AC00054D3BE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D739FF292F6AC00054D3BE /* ProfileView.swift */; };
@@ -40,6 +41,7 @@
 		D989887329319389009A23FB /* SideMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowView.swift; sourceTree = "<group>"; };
 		D9898875293193B6009A23FB /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 		D9898878293196E5009A23FB /* UserStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatsView.swift; sourceTree = "<group>"; };
+		D989887A2931A0CE009A23FB /* SideMenuOptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionRowView.swift; sourceTree = "<group>"; };
 		D9D739F7292F667B0054D3BE /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		D9D739FD292F6A950054D3BE /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		D9D739FF292F6AC00054D3BE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			children = (
 				D98988712931937C009A23FB /* SideMenuView.swift */,
 				D989887329319389009A23FB /* SideMenuRowView.swift */,
+				D989887A2931A0CE009A23FB /* SideMenuOptionRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				D9D73A00292F6AC00054D3BE /* ProfileView.swift in Sources */,
 				D9898876293193B6009A23FB /* SideMenuViewModel.swift in Sources */,
 				D989886D29318DFF009A23FB /* UserRowView.swift in Sources */,
+				D989887B2931A0CE009A23FB /* SideMenuOptionRowView.swift in Sources */,
 				D9D739F8292F667B0054D3BE /* MainTabView.swift in Sources */,
 				D9D73A02292F6ACC0054D3BE /* NotificationsView.swift in Sources */,
 				D9898879293196E5009A23FB /* UserStatsView.swift in Sources */,
