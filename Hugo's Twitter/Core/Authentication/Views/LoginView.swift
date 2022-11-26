@@ -39,7 +39,7 @@ struct LoginView: View {
                 .padding(.trailing, 22)
 
             }
-            
+        
             Button {
                 //
             } label: {
@@ -53,7 +53,6 @@ struct LoginView: View {
             }
             .padding()
             .shadow(color: .gray.opacity(0.5), radius: 10, x: 0, y: 0)
-
             
             Spacer()
             
