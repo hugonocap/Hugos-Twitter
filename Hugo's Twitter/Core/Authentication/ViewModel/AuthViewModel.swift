@@ -16,12 +16,24 @@ class AuthViewModel: ObservableObject {
         // if user is logged in we're going to store the user session in "userSession" variable
         self.userSession = Auth.auth().currentUser
         
-        print("DEBUG: User session is \(String(describing: self.userSession))")
+        print("DEBUG: User session is \(String(describing: self.userSession?.uid))")
     }
     
     // this function gonna log our user in
     func login(withEmail email: String, password: String) {
-        print("DEBUG: Login with email \(email)")
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            
+            // checks for error and print it into console
+            if let error = error {
+                print("DEBUG: Failed to sign in with error \(error.localizedDescription)")
+                return
+            }
+            
+            guard let user = result?.user else { return }
+            self.userSession = user
+            print("DEBUG: Did log user in..")
+            
+        }
     }
     
     // this function gonna sign our user up
