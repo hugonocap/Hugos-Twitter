@@ -17,7 +17,6 @@ struct ContentView: View {
                 LoginView()
             } else {
                 // have a logged in user
-                
                 mainInterfaceView
             }
         }

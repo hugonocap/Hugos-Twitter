@@ -16,7 +16,7 @@ class AuthViewModel: ObservableObject {
         // if user is logged in we're going to store the user session in "userSession" variable
         self.userSession = Auth.auth().currentUser
         
-        print("DEBUG: User session is \(String(describing: self.userSession?.uid))")
+        print("DEBUG: User session is \(self.userSession?.uid)")
     }
     
     // this function gonna log our user in
@@ -31,6 +31,7 @@ class AuthViewModel: ObservableObject {
             
             guard let user = result?.user else { return }
             self.userSession = user
+            
             print("DEBUG: Did log user in..")
             
         }
@@ -51,7 +52,7 @@ class AuthViewModel: ObservableObject {
             self.userSession = user
             
             print("DEBUG: Registered user successfully")
-            print("DEBUG: User is \(String(describing: self.userSession))")
+            print("DEBUG: User is \(self.userSession)")
             
             let data = ["email": email,
                         "username": username.lowercased(),
@@ -61,12 +62,12 @@ class AuthViewModel: ObservableObject {
             Firestore.firestore().collection("users")
                 .document(user.uid)
                 .setData(data) { _ in
-                    print("DEBUG: Did upload user data..")
                 }
         }
     }
     
     func signOut() {
+        // sets user session to nil so we show login view
         userSession = nil
         
         // signs user out in backend/server
