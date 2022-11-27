@@ -19,15 +19,16 @@ struct ContentView: View {
                 // have a logged in user
                 mainInterfaceView
             }
+            
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
 
 extension ContentView {
     

@@ -11,6 +11,7 @@ import Firebase
 class AuthViewModel: ObservableObject {
     // if the user is logged in this property will have a value if not property will be nil
     @Published var userSession: FirebaseAuth.User?
+    @Published var didAuthenticateUser = false
     
     init() {
         // if user is logged in we're going to store the user session in "userSession" variable
@@ -49,7 +50,6 @@ class AuthViewModel: ObservableObject {
             
             
             guard let user = result?.user else { return }
-            self.userSession = user
             
             print("DEBUG: Registered user successfully")
             print("DEBUG: User is \(self.userSession)")
@@ -62,6 +62,7 @@ class AuthViewModel: ObservableObject {
             Firestore.firestore().collection("users")
                 .document(user.uid)
                 .setData(data) { _ in
+                    self.didAuthenticateUser = true
                 }
         }
     }

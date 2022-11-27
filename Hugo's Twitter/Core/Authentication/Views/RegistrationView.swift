@@ -15,11 +15,25 @@ struct RegistrationView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
+        Group {
+            if viewModel.didAuthenticateUser {
+                ProfilePhotoSelectorView()
+            } else {
+                mainInterfaceView
+            }
+        }
+    }
+}
+
+struct RegistrationView_Previews: PreviewProvider {
+    static var previews: some View {
+        RegistrationView()
+    }
+}
+
+extension RegistrationView {
+    var mainInterfaceView: some View {
         VStack {
-            
-            
-                
-    
             AuthenticationHeaderView(title1: "Get Started.", title2: "Create Your Account")
             
             VStack(spacing: 40) {
@@ -31,7 +45,10 @@ struct RegistrationView: View {
             .padding(32)
             
             Button {
-                viewModel.register(withEmail: email, password: password, fullName: fullName, username: username)
+                viewModel.register(withEmail: email,
+                                   password: password,
+                                   fullName: fullName,
+                                   username: username)
             } label: {
                 Text("Sign Up")
                     .font(.headline)
@@ -61,14 +78,7 @@ struct RegistrationView: View {
             .padding(.bottom, 32)
             .font(.footnote)
             .foregroundColor(Color(.systemBlue))
-            
         }
         .ignoresSafeArea()
-    }
-}
-
-struct RegistrationView_Previews: PreviewProvider {
-    static var previews: some View {
-        RegistrationView()
     }
 }

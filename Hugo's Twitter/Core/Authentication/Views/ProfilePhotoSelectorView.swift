@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfilePhotoSelectorView: View {
     var body: some View {
         VStack {
-            AuthenticationHeaderView(title1: "Create your account", title2: "Add a profile photo")
+            AuthenticationHeaderView(title1: "Setup account", title2: "Add a profile photo")
             
             Button {
                 //

@@ -12,6 +12,7 @@
 		D91E1A2329324C97009D214E /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E1A2229324C97009D214E /* RoundedShape.swift */; };
 		D91E1A25293267B9009D214E /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E1A24293267B9009D214E /* CustomInputField.swift */; };
 		D92E5FC12933BB6700ADF279 /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92E5FC02933BB6700ADF279 /* ProfilePhotoSelectorView.swift */; };
+		D92E5FC42933D36700ADF279 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92E5FC32933D36700ADF279 /* ImagePicker.swift */; };
 		D93B94EE292C06EA00E14AEE /* Hugo_s_TwitterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B94ED292C06EA00E14AEE /* Hugo_s_TwitterApp.swift */; };
 		D93B94F0292C06EA00E14AEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B94EF292C06EA00E14AEE /* ContentView.swift */; };
 		D93B94F2292C06EA00E14AEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D93B94F1292C06EA00E14AEE /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		D91E1A2229324C97009D214E /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
 		D91E1A24293267B9009D214E /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
 		D92E5FC02933BB6700ADF279 /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
+		D92E5FC32933D36700ADF279 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		D93B94EA292C06EA00E14AEE /* Hugo's Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hugo's Twitter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D93B94ED292C06EA00E14AEE /* Hugo_s_TwitterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hugo_s_TwitterApp.swift; sourceTree = "<group>"; };
 		D93B94EF292C06EA00E14AEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		D92E5FC22933D34900ADF279 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D92E5FC32933D36700ADF279 /* ImagePicker.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		D93B94E1292C06EA00E14AEE = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +144,7 @@
 		D93B94EC292C06EA00E14AEE /* Hugo's Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				D92E5FC22933D34900ADF279 /* Utils */,
 				D93B94FF292C07E400E14AEE /* Extensions */,
 				D93B94FE292C07DF00E14AEE /* Model */,
 				D93B94FC292C07CF00E14AEE /* Service */,
@@ -472,6 +483,7 @@
 				D98988722931937D009A23FB /* SideMenuView.swift in Sources */,
 				D9D739FE292F6A950054D3BE /* ExploreView.swift in Sources */,
 				D9FC2068293221C40041FB7C /* NewTweetView.swift in Sources */,
+				D92E5FC42933D36700ADF279 /* ImagePicker.swift in Sources */,
 				D9D73A00292F6AC00054D3BE /* ProfileView.swift in Sources */,
 				D92E5FC12933BB6700ADF279 /* ProfilePhotoSelectorView.swift in Sources */,
 				D9898876293193B6009A23FB /* SideMenuViewModel.swift in Sources */,
