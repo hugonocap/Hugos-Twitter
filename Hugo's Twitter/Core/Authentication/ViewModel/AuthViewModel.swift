@@ -12,6 +12,7 @@ class AuthViewModel: ObservableObject {
     // if the user is logged in this property will have a value if not property will be nil
     @Published var userSession: FirebaseAuth.User?
     @Published var didAuthenticateUser = false
+    private var tempUserSession: FirebaseAuth.User?
     
     init() {
         // if user is logged in we're going to store the user session in "userSession" variable
@@ -48,11 +49,8 @@ class AuthViewModel: ObservableObject {
                 return
             }
             
-            
             guard let user = result?.user else { return }
-            
-            print("DEBUG: Registered user successfully")
-            print("DEBUG: User is \(self.userSession)")
+            self.tempUserSession = user
             
             let data = ["email": email,
                         "username": username.lowercased(),
@@ -73,5 +71,17 @@ class AuthViewModel: ObservableObject {
         
         // signs user out in backend/server
         try? Auth.auth().signOut()
+    }
+    
+    func uploadProfileImage(_ image: UIImage) {
+        guard let uid = tempUserSession?.uid else { return }
+        
+        ImageUploader.uploadImage(image: image) { profileImageUrl in
+            Firestore.firestore().collection("users")
+                .document(uid)
+                .updateData(["profileImageUrl": profileImageUrl]) { _ in
+                    self.userSession = self.tempUserSession
+                }
+        }
     }
 }

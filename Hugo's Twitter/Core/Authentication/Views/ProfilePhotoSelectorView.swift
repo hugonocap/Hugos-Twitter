@@ -11,6 +11,7 @@ struct ProfilePhotoSelectorView: View {
     @State private var showImagePicker: Bool = false
     @State private var selectedImage: UIImage?
     @State private var profileImage: Image?
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
         VStack {
             AuthenticationHeaderView(title1: "Setup account", title2: "Add a profile photo")
@@ -37,10 +38,10 @@ struct ProfilePhotoSelectorView: View {
             }
             
             // button
-            if profileImage != nil {
+            if let selectedImage = selectedImage {
                 
                 Button {
-                    //
+                    viewModel.uploadProfileImage(selectedImage)
                 } label: {
                     Text("Continue")
                         .font(.headline)

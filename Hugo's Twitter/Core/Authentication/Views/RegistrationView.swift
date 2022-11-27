@@ -15,9 +15,9 @@ struct RegistrationView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
-        Group {
+        NavigationView {
             if viewModel.didAuthenticateUser {
-                ProfilePhotoSelectorView()
+                NavigationLink(destination: ProfilePhotoSelectorView(), isActive: $viewModel.didAuthenticateUser ,label: {})
             } else {
                 mainInterfaceView
             }
