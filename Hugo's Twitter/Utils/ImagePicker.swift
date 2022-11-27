@@ -1,30 +1,43 @@
-////
-////  ImagePicker.swift
-////  Hugo's Twitter
-////
-////  Created by Hugo on 27.11.22.
-////
 //
-//import SwiftUI
+//  ImagePicker.swift
+//  Hugo's Twitter
 //
-//struct ImagePicker: UIViewControllerRepresentable {
+//  Created by Hugo on 27.11.22.
 //
-//    func makeCoordinator() -> Coordinator {
-//
-//    }
-//
-//    func makeUIViewController(context: Context) -> some UIViewController {
-//        return Coordinator
-//    }
-//
-//    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-//
-//    }
-//
-//}
-//
-//extension ImagePicker {
-//    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-//
-//    }
-//}
+
+import SwiftUI
+
+struct ImagePicker: UIViewControllerRepresentable {
+    @Binding var selectedImage: UIImage?
+    @Environment(\.presentationMode) var presentationMode
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(self)
+    }
+    
+    func makeUIViewController(context: Context) -> some UIViewController {
+        let picker = UIImagePickerController()
+        picker.delegate = context.coordinator
+        return picker
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        
+    }
+    
+}
+
+extension ImagePicker {
+    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+        let parent: ImagePicker
+        
+        init(_ parent: ImagePicker) {
+            self.parent = parent
+        }
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            guard let image = info[.originalImage] as? UIImage else { return }
+            parent.selectedImage = image
+            parent.presentationMode.wrappedValue.dismiss()
+        }
+    }
+}
