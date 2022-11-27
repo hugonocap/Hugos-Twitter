@@ -21,9 +21,11 @@ struct ProfilePhotoSelectorView: View {
                 
                 if let profileImage = profileImage {
                     profileImage
+                        .resizable()
                         .modifier(ProfileImageModifier())
                 } else {
                     Image(systemName: "photo.circle")
+                        .resizable()
                         .renderingMode(.template)
                         .foregroundColor(Color(.systemBlue))
                         .modifier(ProfileImageModifier())
@@ -32,6 +34,25 @@ struct ProfilePhotoSelectorView: View {
             .padding(.top, 44)
             .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
                 ImagePicker(selectedImage: $selectedImage)
+            }
+            
+            // button
+            if profileImage != nil {
+                
+                Button {
+                    //
+                } label: {
+                    Text("Continue")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 50)
+                        .background(Color(.systemBlue))
+                        .clipShape(Capsule())
+                }
+                .padding()
+                .shadow(color: .gray.opacity(0.5), radius: 10, x: 0, y: 0)
+                
             }
             
             Spacer()
@@ -49,8 +70,9 @@ struct ProfilePhotoSelectorView: View {
 private struct ProfileImageModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .scaledToFit()
+            .scaledToFill()
             .frame(width: 180, height: 180)
+            .clipShape(Circle())
     }
 }
 
