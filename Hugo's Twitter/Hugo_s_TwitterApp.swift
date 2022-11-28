@@ -21,6 +21,7 @@ struct Hugo_s_TwitterApp: App {
         WindowGroup {
             NavigationView {
                 ContentView()
+//                ProfilePhotoSelectorView()
             }
             .environmentObject(viewModel)
         }

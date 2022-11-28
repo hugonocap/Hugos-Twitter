@@ -38,10 +38,10 @@ struct ProfilePhotoSelectorView: View {
             }
             
             // button
-            if let selectedImage = selectedImage {
+            if let profileImage = profileImage {
                 
                 Button {
-                    viewModel.uploadProfileImage(selectedImage)
+                    viewModel.uploadProfileImage(selectedImage!)
                 } label: {
                     Text("Continue")
                         .font(.headline)
