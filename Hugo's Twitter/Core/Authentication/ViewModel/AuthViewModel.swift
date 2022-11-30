@@ -14,11 +14,12 @@ class AuthViewModel: ObservableObject {
     @Published var didAuthenticateUser = false
     private var tempUserSession: FirebaseAuth.User?
     
+    private let service = UserService()
+    
     init() {
         // if user is logged in we're going to store the user session in "userSession" variable
         self.userSession = Auth.auth().currentUser
-        
-        print("DEBUG: User session is \(self.userSession?.uid)")
+        self.fetchUser()
     }
     
     // this function gonna log our user in
@@ -84,4 +85,11 @@ class AuthViewModel: ObservableObject {
                 }
         }
     }
+    
+    func fetchUser() {
+        guard let uid = self.userSession?.uid else { return }
+        
+        service.fetchUser(withUid: uid)
+    }
+    
 }
