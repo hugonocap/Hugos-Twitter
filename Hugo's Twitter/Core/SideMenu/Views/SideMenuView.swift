@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct SideMenuView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
@@ -16,8 +17,11 @@ struct SideMenuView: View {
             VStack(alignment: .leading, spacing: 32) {
                 
                 VStack(alignment: .leading) {
-                    Circle()
-                        .frame(width: 48, height: 48)
+                    KFImage(URL(string: user.profileImageUrl))
+                        .resizable()
+                        .scaledToFill()
+                        .clipShape(Circle())
+                        .frame(width: 64, height: 64)
                     
                     VStack(alignment: .leading, spacing: 4) {
                         Text(user.fullname)

@@ -34,6 +34,7 @@
 		D9D73A04292F6AD80054D3BE /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D73A03292F6AD80054D3BE /* MessagesView.swift */; };
 		D9DE48AF2937CF4600C63F35 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DE48AE2937CF4600C63F35 /* UserService.swift */; };
 		D9DE48B12937D19E00C63F35 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DE48B02937D19E00C63F35 /* User.swift */; };
+		D9DE48B42937D7E500C63F35 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D9DE48B32937D7E500C63F35 /* Kingfisher */; };
 		D9F77A2229328CA6006A1E16 /* AuthenticationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F77A2129328CA6006A1E16 /* AuthenticationHeaderView.swift */; };
 		D9F77A2629329B99006A1E16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9F77A2529329B99006A1E16 /* GoogleService-Info.plist */; };
 		D9F77A2929329F83006A1E16 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D9F77A2829329F83006A1E16 /* FirebaseAuth */; };
@@ -90,6 +91,7 @@
 				D9F77A2F29329F83006A1E16 /* FirebaseStorage in Frameworks */,
 				D9F77A2B29329F83006A1E16 /* FirebaseFirestore in Frameworks */,
 				D9F77A2D29329F83006A1E16 /* FirebaseFirestoreSwift in Frameworks */,
+				D9DE48B42937D7E500C63F35 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +422,7 @@
 				D9F77A2A29329F83006A1E16 /* FirebaseFirestore */,
 				D9F77A2C29329F83006A1E16 /* FirebaseFirestoreSwift */,
 				D9F77A2E29329F83006A1E16 /* FirebaseStorage */,
+				D9DE48B32937D7E500C63F35 /* Kingfisher */,
 			);
 			productName = "Hugo's Twitter";
 			productReference = D93B94EA292C06EA00E14AEE /* Hugo's Twitter.app */;
@@ -451,6 +454,7 @@
 			mainGroup = D93B94E1292C06EA00E14AEE;
 			packageReferences = (
 				D9F77A2729329F83006A1E16 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D9DE48B22937D7E500C63F35 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = D93B94EB292C06EA00E14AEE /* Products */;
 			projectDirPath = "";
@@ -710,6 +714,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D9DE48B22937D7E500C63F35 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		D9F77A2729329F83006A1E16 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -721,6 +733,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D9DE48B32937D7E500C63F35 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9DE48B22937D7E500C63F35 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		D9F77A2829329F83006A1E16 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D9F77A2729329F83006A1E16 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
