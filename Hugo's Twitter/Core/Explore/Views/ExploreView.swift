@@ -9,11 +9,16 @@ import SwiftUI
 
 struct ExploreView: View {
     @ObservedObject var viewModel = ExploreViewModel()
+    @State private var searchingText = ""
+    
     var body: some View {
         VStack {
+            SearchBar(text: $searchingText)
+                .padding()
+            
             ScrollView {
                 LazyVStack {
-                    ForEach(viewModel.users, id: \.id) { user in
+                    ForEach(viewModel.users) { user in
                         NavigationLink {
                                 ProfileView(user: user)
                         } label: {
