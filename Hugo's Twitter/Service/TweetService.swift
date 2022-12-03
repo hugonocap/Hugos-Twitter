@@ -26,6 +26,8 @@ struct TweetService {
                     completion(false)
                     return
                 }
+                
+                completion(true)
             }
         
     }
