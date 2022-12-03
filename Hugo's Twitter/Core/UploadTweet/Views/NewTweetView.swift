@@ -11,7 +11,8 @@ import Kingfisher
 struct NewTweetView: View {
     @State private var caption: String = ""
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var authViewModel: AuthViewModel
+    @ObservedObject var viewModel = UploadTweetViewModel()
     var body: some View {
         VStack {
             
@@ -27,7 +28,7 @@ struct NewTweetView: View {
                 Spacer()
                 
                 Button {
-                    // tweet button
+                    viewModel.uploadTweet(withCaption: caption)
                 } label: {
                     Text("Tweet")
                         .fontWeight(.bold)
@@ -44,7 +45,7 @@ struct NewTweetView: View {
             
             HStack(alignment: .top) {
                 
-                if let user = viewModel.currentUser {
+                if let user = authViewModel.currentUser {
                     KFImage(URL(string: user.profileImageUrl))
                         .resizable()
                         .scaledToFill()

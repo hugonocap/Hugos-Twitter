@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D91AE0E0293C105F00D674BD /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91AE0DF293C105F00D674BD /* TweetService.swift */; };
+		D91AE0E2293C137F00D674BD /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91AE0E1293C137F00D674BD /* UploadTweetViewModel.swift */; };
 		D91E1A1F29324954009D214E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E1A1E29324954009D214E /* LoginView.swift */; };
 		D91E1A2129324960009D214E /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E1A2029324960009D214E /* RegistrationView.swift */; };
 		D91E1A2329324C97009D214E /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E1A2229324C97009D214E /* RoundedShape.swift */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		D91AE0DE293C0F8500D674BD /* Hugo-s-Twitter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Hugo-s-Twitter-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D91AE0DF293C105F00D674BD /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
+		D91AE0E1293C137F00D674BD /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
 		D91E1A1E29324954009D214E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D91E1A2029324960009D214E /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		D91E1A2229324C97009D214E /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 		D9FC2066293221B30041FB7C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D91AE0E1293C137F00D674BD /* UploadTweetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				D9DE48B12937D19E00C63F35 /* User.swift in Sources */,
 				D93B94EE292C06EA00E14AEE /* Hugo_s_TwitterApp.swift in Sources */,
 				D9F77A2229328CA6006A1E16 /* AuthenticationHeaderView.swift in Sources */,
+				D91AE0E2293C137F00D674BD /* UploadTweetViewModel.swift in Sources */,
 				D9FC206A293223790041FB7C /* TextArea.swift in Sources */,
 				D98988722931937D009A23FB /* SideMenuView.swift in Sources */,
 				D9D739FE292F6A950054D3BE /* ExploreView.swift in Sources */,
