@@ -31,4 +31,21 @@ struct TweetService {
             }
         
     }
+    
+    func fetchTweets() {
+        Firestore.firestore().collection("tweets")
+            .getDocuments { snapshot, error in
+                
+                if let error = error {
+                    print("DEBUG: Tweet fetching error \(error.localizedDescription)")
+                    return
+                }
+                
+                guard let documents = snapshot?.documents else { return }
+                
+                documents.forEach { doc in
+                    print(doc.data())
+                }
+            }
+    }
 }
