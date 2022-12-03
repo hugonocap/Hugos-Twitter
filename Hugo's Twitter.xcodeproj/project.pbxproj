@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D91AE0E0293C105F00D674BD /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91AE0DF293C105F00D674BD /* TweetService.swift */; };
 		D91E1A1F29324954009D214E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E1A1E29324954009D214E /* LoginView.swift */; };
 		D91E1A2129324960009D214E /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E1A2029324960009D214E /* RegistrationView.swift */; };
 		D91E1A2329324C97009D214E /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E1A2229324C97009D214E /* RoundedShape.swift */; };
@@ -49,6 +50,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D91AE0DE293C0F8500D674BD /* Hugo-s-Twitter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Hugo-s-Twitter-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D91AE0DF293C105F00D674BD /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		D91E1A1E29324954009D214E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D91E1A2029324960009D214E /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		D91E1A2229324C97009D214E /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
@@ -156,6 +159,7 @@
 		D93B94EC292C06EA00E14AEE /* Hugo's Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				D91AE0DE293C0F8500D674BD /* Hugo-s-Twitter-Info.plist */,
 				D92E5FC22933D34900ADF279 /* Utils */,
 				D93B94FF292C07E400E14AEE /* Extensions */,
 				D93B94FE292C07DF00E14AEE /* Model */,
@@ -200,6 +204,7 @@
 			children = (
 				D93417142934157D00B1FE4B /* ImageUploader.swift */,
 				D9DE48AE2937CF4600C63F35 /* UserService.swift */,
+				D91AE0DF293C105F00D674BD /* TweetService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -496,6 +501,7 @@
 				D989887429319389009A23FB /* SideMenuRowView.swift in Sources */,
 				D93B9505292C095900E14AEE /* FeedView.swift in Sources */,
 				D9602142293A9BBC002C0B02 /* SearchBar.swift in Sources */,
+				D91AE0E0293C105F00D674BD /* TweetService.swift in Sources */,
 				D98B2D402939F6FF00546F7E /* ExploreViewModel.swift in Sources */,
 				D989886629317E5B009A23FB /* TweetFilterViewModel.swift in Sources */,
 				D91E1A25293267B9009D214E /* CustomInputField.swift in Sources */,
@@ -651,9 +657,9 @@
 				DEVELOPMENT_TEAM = JKNGV2KZJ7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Hugo-s-Twitter-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -680,9 +686,9 @@
 				DEVELOPMENT_TEAM = JKNGV2KZJ7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Hugo-s-Twitter-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
