@@ -34,6 +34,7 @@ struct TweetService {
     
     func fetchTweets(completion: @escaping([Tweet]) -> Void) {
         Firestore.firestore().collection("tweets")
+            .order(by: "timestamp", descending: true) // sorting by recent
             .getDocuments { snapshot, error in
                 
                 if let error = error {
@@ -45,6 +46,23 @@ struct TweetService {
                 
                 let tweets = documents.compactMap { try? $0.data(as: Tweet.self) }
                 completion(tweets)
+            }
+    }
+    
+    func fetchTweets(forUid uid: String, completion: @escaping([Tweet]) -> Void) {
+        Firestore.firestore().collection("tweets")
+            .whereField("uid", isEqualTo: uid) // going to firestore and searching for uid which equals to user uid
+            .getDocuments { snapshot, error in
+                
+                if let error = error {
+                    print("DEBUG: Tweet fetching error \(error.localizedDescription)")
+                    return
+                }
+                
+                guard let documents = snapshot?.documents else { return }
+                
+                var tweets = documents.compactMap { try? $0.data(as: Tweet.self) }
+                completion(tweets.sorted(by: { $0.timestamp.dateValue() > $1.timestamp.dateValue() })) // sorting by recent
             }
     }
 }
