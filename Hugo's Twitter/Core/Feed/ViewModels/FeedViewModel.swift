@@ -8,8 +8,11 @@
 import Foundation
 
 class FeedViewModel: ObservableObject {
-    // service constant
+    @Published var tweets = [Tweet]()
+    // service constants
     let service = TweetService()
+    let userService = UserService()
+    
     
     init() {
         fetchTweets()
@@ -17,6 +20,17 @@ class FeedViewModel: ObservableObject {
     
     // fetching tweets..
     func fetchTweets() {
-        service.fetchTweets()
+        service.fetchTweets { tweets in
+            self.tweets = tweets
+            
+            for item in 0 ..< tweets.count {
+                let uid = tweets[item].uid
+                
+                self.userService.fetchUser(withUid: uid) { user in
+                    self.tweets[item].user = user
+                }
+            }
+            
+        }
     }
 }

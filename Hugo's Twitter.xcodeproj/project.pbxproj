@@ -10,6 +10,7 @@
 		D91AE0E0293C105F00D674BD /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91AE0DF293C105F00D674BD /* TweetService.swift */; };
 		D91AE0E2293C137F00D674BD /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91AE0E1293C137F00D674BD /* UploadTweetViewModel.swift */; };
 		D91AE0E4293C196400D674BD /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91AE0E3293C196400D674BD /* FeedViewModel.swift */; };
+		D91AE0E6293C1B1400D674BD /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91AE0E5293C1B1400D674BD /* Tweet.swift */; };
 		D91E1A1F29324954009D214E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E1A1E29324954009D214E /* LoginView.swift */; };
 		D91E1A2129324960009D214E /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E1A2029324960009D214E /* RegistrationView.swift */; };
 		D91E1A2329324C97009D214E /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E1A2229324C97009D214E /* RoundedShape.swift */; };
@@ -56,6 +57,7 @@
 		D91AE0DF293C105F00D674BD /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		D91AE0E1293C137F00D674BD /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
 		D91AE0E3293C196400D674BD /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		D91AE0E5293C1B1400D674BD /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		D91E1A1E29324954009D214E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D91E1A2029324960009D214E /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		D91E1A2229324C97009D214E /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				D9DE48B02937D19E00C63F35 /* User.swift */,
+				D91AE0E5293C1B1400D674BD /* Tweet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				D91E1A1F29324954009D214E /* LoginView.swift in Sources */,
 				D9F77A312932A46F006A1E16 /* AuthViewModel.swift in Sources */,
 				D93417152934157D00B1FE4B /* ImageUploader.swift in Sources */,
+				D91AE0E6293C1B1400D674BD /* Tweet.swift in Sources */,
 				D9D73A02292F6ACC0054D3BE /* NotificationsView.swift in Sources */,
 				D9898879293196E5009A23FB /* UserStatsView.swift in Sources */,
 				D91E1A2129324960009D214E /* RegistrationView.swift in Sources */,
