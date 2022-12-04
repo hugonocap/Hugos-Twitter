@@ -38,13 +38,13 @@ struct TweetRowView: View {
                                 .foregroundColor(.gray)
                                 .font(.caption)
                         }
+                        
+                        // tweet caption
+                        Text(tweet.caption)
+                            .font(.subheadline)
+                            .multilineTextAlignment(.leading)
+                        
                     }
-                    
-                    // tweet caption
-                    
-                    Text(tweet.caption)
-                        .font(.subheadline)
-                        .multilineTextAlignment(.leading)
                 }
             }
             
