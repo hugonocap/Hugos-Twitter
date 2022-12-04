@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D91AE0E0293C105F00D674BD /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91AE0DF293C105F00D674BD /* TweetService.swift */; };
 		D91AE0E2293C137F00D674BD /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91AE0E1293C137F00D674BD /* UploadTweetViewModel.swift */; };
+		D91AE0E4293C196400D674BD /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91AE0E3293C196400D674BD /* FeedViewModel.swift */; };
 		D91E1A1F29324954009D214E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E1A1E29324954009D214E /* LoginView.swift */; };
 		D91E1A2129324960009D214E /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E1A2029324960009D214E /* RegistrationView.swift */; };
 		D91E1A2329324C97009D214E /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E1A2229324C97009D214E /* RoundedShape.swift */; };
@@ -54,6 +55,7 @@
 		D91AE0DE293C0F8500D674BD /* Hugo-s-Twitter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Hugo-s-Twitter-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D91AE0DF293C105F00D674BD /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		D91AE0E1293C137F00D674BD /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
+		D91AE0E3293C196400D674BD /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		D91E1A1E29324954009D214E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D91E1A2029324960009D214E /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		D91E1A2229324C97009D214E /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 		D93B9502292C092100E14AEE /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				D91AE0E3293C196400D674BD /* FeedViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				D9FC206A293223790041FB7C /* TextArea.swift in Sources */,
 				D98988722931937D009A23FB /* SideMenuView.swift in Sources */,
 				D9D739FE292F6A950054D3BE /* ExploreView.swift in Sources */,
+				D91AE0E4293C196400D674BD /* FeedViewModel.swift in Sources */,
 				D9FC2068293221C40041FB7C /* NewTweetView.swift in Sources */,
 				D92E5FC42933D36700ADF279 /* ImagePicker.swift in Sources */,
 				D9D73A00292F6AC00054D3BE /* ProfileView.swift in Sources */,
