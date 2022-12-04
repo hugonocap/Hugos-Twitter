@@ -21,6 +21,10 @@ class ProfileViewModel: ObservableObject {
         guard let uid = user.id else { return }
         service.fetchTweets(forUid: uid) { tweets in
             self.tweets = tweets
+            
+            for item in 0 ..< tweets.count {
+                self.tweets[item].user = self.user
+            }
         }
     }
 }

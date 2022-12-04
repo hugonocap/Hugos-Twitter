@@ -165,9 +165,9 @@ extension ProfileView {
     var tweetsView: some View {
         ScrollView {
             LazyVStack {
-//                ForEach(0 ..< 10) { tweet in
-//                    TweetRowView()
-//                }
+                ForEach(viewModel.tweets) { tweet in
+                    TweetRowView(tweet: tweet)
+                }
             }
         }
     }
